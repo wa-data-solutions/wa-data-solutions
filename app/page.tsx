@@ -4,44 +4,41 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
-
   const whatsappLink =
     "https://wa.me/5511971802678?text=Olá,%20quero%20um%20diagnóstico%20gratuito%20de%20dados";
 
   return (
-    <div className="bg-slate-950 text-white min-h-screen">
+    <div className="bg-[#020617] text-white min-h-screen">
 
-      {/* SEO */}
-      <title>WA Data Solutions | Engenharia de Dados e BI</title>
-      <meta
-        name="description"
-        content="Organize seus dados, elimine retrabalho e tome decisões com confiança com soluções de Engenharia de Dados, BI e Cloud."
-      />
+      {/* HEADER BIG TECH */}
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#020617]/70 border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-4">
 
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800 flex justify-between items-center px-6 py-4">
+          {/* LOGO + NOME */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="WA Data Solutions Logo"
+              width={160}
+              height={50}
+              className="h-10 md:h-12 w-auto"
+              priority
+            />
+            <span className="hidden md:block font-semibold text-lg tracking-wide">
+              WA Data Solutions
+            </span>
+          </div>
 
-        <div className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="WA Data Solutions Logo"
-            width={120}
-            height={40}
-            className="h-8 w-auto"
-            priority
-          />
+          {/* CTA */}
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition shadow-lg"
+          >
+            Falar com especialista
+          </a>
         </div>
-
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Falar agora no WhatsApp"
-          className="bg-green-500 px-5 py-2 rounded-lg text-black font-semibold hover:scale-105 transition"
-        >
-          Falar agora
-        </a>
-
       </header>
 
       {/* WHATSAPP FLOAT */}
@@ -49,50 +46,55 @@ export default function Home() {
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Abrir conversa no WhatsApp"
-        className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-50"
+        className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl hover:scale-110 transition z-50"
       >
         💬
       </a>
 
       {/* HERO */}
-      <section className="text-center py-28 px-6">
+      <section className="text-center py-32 px-6 relative overflow-hidden">
+
+        {/* glow background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-transparent blur-3xl"></div>
+
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-6xl font-bold mb-6"
+          className="relative text-4xl md:text-6xl font-bold mb-6 leading-tight"
         >
-          Organize seus dados, elimine retrabalho e tome decisões com confiança
+          Transforme seus dados em vantagem competitiva
         </motion.h1>
 
-        <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-          Ajudo empresas a sair do caos de planilhas e construir uma estrutura de dados escalável com BI, pipelines e cloud
+        <p className="relative text-lg text-slate-300 max-w-2xl mx-auto">
+          Estruturamos seus dados, eliminamos retrabalho e criamos dashboards que realmente ajudam você a crescer.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-10 relative">
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Quero meu diagnóstico gratuito"
-            className="bg-green-500 text-black px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
+            className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-10 py-5 rounded-2xl font-semibold text-lg shadow-xl hover:scale-105 transition"
           >
-            Quero meu diagnóstico 🚀
+            Quero meu diagnóstico gratuito 🚀
           </a>
         </div>
+
       </section>
 
-      {/* PARA QUEM É */}
+      {/* PROBLEMA */}
       <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-10">Para quem é</h2>
+        <h2 className="text-3xl font-semibold mb-10">
+          Se você se identifica com isso…
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
-            "Empresas com dados espalhados em planilhas",
-            "Negócios que não confiam nos relatórios",
-            "Times que perdem tempo consolidando dados manualmente"
+            "Planilhas espalhadas e sem controle",
+            "Relatórios inconsistentes",
+            "Tempo perdido consolidando dados"
           ].map((item, i) => (
-            <div key={i} className="bg-slate-900 p-6 rounded-xl">
+            <div key={i} className="bg-white/5 p-6 rounded-xl border border-white/10">
               {item}
             </div>
           ))}
@@ -101,29 +103,29 @@ export default function Home() {
 
       {/* SERVIÇOS */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-12 text-center">Serviços</h2>
+        <h2 className="text-3xl font-semibold mb-12 text-center">
+          O que fazemos
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               title: "Engenharia de Dados",
-              desc: "Pipelines, ETL e integração de sistemas"
+              desc: "Pipelines robustos e integração de sistemas"
             },
             {
               title: "Business Intelligence",
-              desc: "Dashboards estratégicos e KPIs"
+              desc: "Dashboards estratégicos para decisão"
             },
             {
               title: "Cloud & Arquitetura",
-              desc: "Soluções escaláveis em cloud"
+              desc: "Infraestrutura escalável e moderna"
             }
           ].map((item, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800"
+              className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-green-400/30 transition"
             >
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-slate-400">{item.desc}</p>
@@ -132,84 +134,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
-      <section className="py-24 px-6 bg-slate-900 text-center">
+      {/* PROCESSO */}
+      <section className="py-24 px-6 text-center bg-white/5">
         <h2 className="text-3xl font-semibold mb-10">Como funciona</h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
-            "Diagnóstico do seu cenário atual",
-            "Desenho da arquitetura ideal",
-            "Implementação e entrega de valor"
+            "Diagnóstico do cenário atual",
+            "Desenho da solução ideal",
+            "Implementação e entrega"
           ].map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="bg-slate-800 p-6 rounded-xl"
-            >
-              <p>{step}</p>
-            </motion.div>
+            <div key={i} className="bg-[#020617] p-6 rounded-xl border border-white/10">
+              {step}
+            </div>
           ))}
         </div>
       </section>
 
       {/* RESULTADOS */}
       <section className="py-24 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Resultados</h2>
+        <h2 className="text-3xl font-semibold mb-10">Resultados reais</h2>
 
-        <div className="flex flex-col md:flex-row gap-8 justify-center">
+        <div className="flex flex-col md:flex-row gap-10 justify-center">
           <div>
             <h3 className="text-4xl font-bold text-green-400">+80%</h3>
-            <p>Ganho de performance</p>
+            <p>Mais eficiência operacional</p>
           </div>
           <div>
             <h3 className="text-4xl font-bold text-green-400">-40%</h3>
-            <p>Redução de custo</p>
+            <p>Redução de custos</p>
           </div>
           <div>
             <h3 className="text-4xl font-bold text-green-400">100%</h3>
-            <p>Decisões baseadas em dados</p>
+            <p>Decisões orientadas a dados</p>
           </div>
         </div>
-      </section>
-
-      {/* OFERTA */}
-      <section className="py-24 text-center bg-slate-900">
-        <h2 className="text-3xl font-semibold mb-6">
-          Diagnóstico gratuito de dados
-        </h2>
-
-        <p className="text-slate-300 max-w-xl mx-auto mb-8">
-          Em uma conversa rápida, identifico os principais problemas da sua estrutura
-          de dados e mostro como resolver.
-        </p>
-
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Quero diagnóstico gratuito"
-          className="bg-green-500 px-8 py-4 rounded-xl font-semibold text-black"
-        >
-          Quero meu diagnóstico 🚀
-        </a>
       </section>
 
       {/* CTA FINAL */}
       <section className="py-28 text-center">
         <h2 className="text-3xl font-semibold mb-6">
-          Pronto para escalar seus dados?
+          Vamos estruturar seus dados?
         </h2>
 
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Quero começar agora"
-          className="bg-green-500 px-10 py-5 rounded-2xl font-semibold text-lg text-black shadow-lg hover:scale-105 transition"
+          className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-10 py-5 rounded-2xl font-semibold text-lg shadow-xl hover:scale-105 transition"
         >
-          Quero meu diagnóstico 🚀
+          Falar com especialista 🚀
         </a>
       </section>
 
