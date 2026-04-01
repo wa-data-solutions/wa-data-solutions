@@ -14,7 +14,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800 flex justify-between items-center px-6 py-4">
         
         <div className="text-xl font-bold tracking-wide">
-          WA <span className="text-green-400">DATA</span>
+          WA <span className="text-green-400">DATA SOLUTIONS</span>
         </div>
 
         <a
