@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -10,17 +11,32 @@ export default function Home() {
   return (
     <div className="bg-slate-950 text-white min-h-screen">
 
+      {/* SEO */}
+      <title>WA Data Solutions | Engenharia de Dados e BI</title>
+      <meta
+        name="description"
+        content="Organize seus dados, elimine retrabalho e tome decisões com confiança com soluções de Engenharia de Dados, BI e Cloud."
+      />
+
       {/* HEADER */}
       <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800 flex justify-between items-center px-6 py-4">
-        
-        <div className="text-xl font-bold tracking-wide">
-          WA <span className="text-green-400">DATA SOLUTIONS</span>
+
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="WA Data Solutions Logo"
+            width={120}
+            height={40}
+            className="h-8 w-auto"
+            priority
+          />
         </div>
 
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Falar agora no WhatsApp"
           className="bg-green-500 px-5 py-2 rounded-lg text-black font-semibold hover:scale-105 transition"
         >
           Falar agora
@@ -33,6 +49,7 @@ export default function Home() {
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Abrir conversa no WhatsApp"
         className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-50"
       >
         💬
@@ -57,6 +74,7 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Quero meu diagnóstico gratuito"
             className="bg-green-500 text-black px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
           >
             Quero meu diagnóstico 🚀
@@ -171,6 +189,7 @@ export default function Home() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Quero diagnóstico gratuito"
           className="bg-green-500 px-8 py-4 rounded-xl font-semibold text-black"
         >
           Quero meu diagnóstico 🚀
@@ -187,6 +206,7 @@ export default function Home() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Quero começar agora"
           className="bg-green-500 px-10 py-5 rounded-2xl font-semibold text-lg text-black shadow-lg hover:scale-105 transition"
         >
           Quero meu diagnóstico 🚀
