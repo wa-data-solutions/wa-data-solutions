@@ -10,23 +10,25 @@ export default function Home() {
   return (
     <div className="bg-[#020617] text-white min-h-screen">
 
-      {/* HEADER BIG TECH */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#020617]/70 border-b border-white/10">
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#020617]/80 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-4">
 
-          {/* LOGO + BRAND */}
+          {/* LOGO FORTE */}
           <div className="flex items-center gap-4">
 
-            <Image
-              src="/logo.png"
-              alt="WA Data Solutions Logo"
-              width={220}
-              height={80}
-              className="h-14 md:h-16 w-auto"
-              priority
-            />
+            <div className="bg-white/5 p-2 rounded-xl">
+              <Image
+                src="/logo.png"
+                alt="WA Data Solutions Logo"
+                width={260}
+                height={100}
+                className="h-16 md:h-20 w-auto"
+                priority
+              />
+            </div>
 
-            <span className="hidden md:block font-semibold text-xl tracking-wide text-white">
+            <span className="hidden md:block font-semibold text-2xl tracking-wide">
               WA <span className="text-green-400">DATA</span>
             </span>
 
@@ -58,7 +60,6 @@ export default function Home() {
       {/* HERO */}
       <section className="text-center py-32 px-6 relative overflow-hidden">
 
-        {/* glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-transparent blur-3xl"></div>
 
         <motion.h1
@@ -66,7 +67,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="relative text-4xl md:text-6xl font-bold mb-6 leading-tight"
         >
-          Transforme seus dados em vantagem competitiva
+          Pare de perder dinheiro com dados bagunçados
         </motion.h1>
 
         <p className="relative text-lg text-slate-300 max-w-2xl mx-auto">
@@ -82,8 +83,20 @@ export default function Home() {
           >
             Quero meu diagnóstico gratuito 🚀
           </a>
+
+          {/* URGÊNCIA */}
+          <p className="text-sm text-green-400 mt-4">
+            🔥 Diagnóstico gratuito por tempo limitado
+          </p>
         </div>
 
+      </section>
+
+      {/* PROVA SOCIAL */}
+      <section className="py-12 text-center">
+        <p className="text-slate-400">
+          +10 projetos entregues • +80% ganho de eficiência • redução de custos reais
+        </p>
       </section>
 
       {/* PROBLEMA */}
@@ -155,26 +168,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RESULTADOS */}
-      <section className="py-24 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-10">Resultados reais</h2>
-
-        <div className="flex flex-col md:flex-row gap-10 justify-center">
-          <div>
-            <h3 className="text-4xl font-bold text-green-400">+80%</h3>
-            <p>Mais eficiência operacional</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold text-green-400">-40%</h3>
-            <p>Redução de custos</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold text-green-400">100%</h3>
-            <p>Decisões orientadas a dados</p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA FINAL */}
       <section className="py-28 text-center">
         <h2 className="text-3xl font-semibold mb-6">
@@ -194,3 +187,4 @@ export default function Home() {
     </div>
   );
 }
+
