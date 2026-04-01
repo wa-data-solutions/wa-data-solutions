@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Home() {
 
   const whatsappLink =
-    "https://wa.me/5596991420705?text=Olá,%20quero%20falar%20sobre%20engenharia%20de%20dados";
+    "https://wa.me/5511971802678?text=Olá,%20quero%20falar%20sobre%20engenharia%20de%20dados";
 
   return (
     <div className="bg-slate-950 text-white min-h-screen">
