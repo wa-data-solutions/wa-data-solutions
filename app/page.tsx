@@ -14,19 +14,22 @@ export default function Home() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#020617]/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-4">
 
-          {/* LOGO + NOME */}
-          <div className="flex items-center gap-3">
+          {/* LOGO + BRAND */}
+          <div className="flex items-center gap-4">
+
             <Image
               src="/logo.png"
               alt="WA Data Solutions Logo"
-              width={160}
-              height={50}
-              className="h-10 md:h-12 w-auto"
+              width={220}
+              height={80}
+              className="h-14 md:h-16 w-auto"
               priority
             />
-            <span className="hidden md:block font-semibold text-lg tracking-wide">
-              WA Data Solutions
+
+            <span className="hidden md:block font-semibold text-xl tracking-wide text-white">
+              WA <span className="text-green-400">DATA</span>
             </span>
+
           </div>
 
           {/* CTA */}
@@ -34,10 +37,11 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition shadow-lg"
+            className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition shadow-lg"
           >
             Falar com especialista
           </a>
+
         </div>
       </header>
 
@@ -54,7 +58,7 @@ export default function Home() {
       {/* HERO */}
       <section className="text-center py-32 px-6 relative overflow-hidden">
 
-        {/* glow background */}
+        {/* glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-transparent blur-3xl"></div>
 
         <motion.h1
