@@ -3,13 +3,18 @@
 import { motion } from "framer-motion";
 
 export default function Home() {
+
+  const whatsappLink =
+    "https://wa.me/5596991420705?text=Olá,%20quero%20falar%20sobre%20engenharia%20de%20dados";
+
   return (
     <div className="bg-slate-950 text-white min-h-screen">
 
       {/* WHATSAPP FLOAT */}
       <a
-        href="https://wa.me/5596991420705?text=Olá,%20quero%20falar%20sobre%20dados"
+        href={whatsappLink}
         target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-50"
       >
         💬
@@ -31,8 +36,9 @@ export default function Home() {
 
         <div className="mt-10">
           <a
-            href="https://wa.me/5596991420705"
+            href={whatsappLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-900 px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
           >
             Falar no WhatsApp
@@ -122,8 +128,9 @@ export default function Home() {
         </h2>
 
         <a
-          href="https://wa.me/5596991420705"
+          href={whatsappLink}
           target="_blank"
+          rel="noopener noreferrer"
           className="bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-900 px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
         >
           Falar no WhatsApp
