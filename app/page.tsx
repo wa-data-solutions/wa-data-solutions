@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Home() {
 
   const whatsappLink =
-    "https://wa.me/5511971802678?text=Olá,%20quero%20falar%20sobre%20engenharia%20de%20dados";
+    "https://wa.me/5511971802678?text=Olá,%20quero%20um%20diagnóstico%20gratuito%20de%20dados";
 
   return (
     <div className="bg-slate-950 text-white min-h-screen">
@@ -27,11 +27,11 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Transforme dados em decisões estratégicas
+          Organize seus dados, elimine retrabalho e tome decisões com confiança
         </motion.h1>
 
         <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-          Engenharia de Dados, BI e Cloud para empresas que querem escalar com inteligência
+          Ajudo empresas a sair do caos de planilhas e construir uma estrutura de dados escalável com BI, pipelines e cloud
         </p>
 
         <div className="mt-10">
@@ -39,10 +39,27 @@ export default function Home() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-900 px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
+            className="bg-green-500 text-black px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
           >
-            Falar no WhatsApp
+            Quero meu diagnóstico 🚀
           </a>
+        </div>
+      </section>
+
+      {/* PARA QUEM É */}
+      <section className="py-20 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-10">Para quem é</h2>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[
+            "Empresas com dados espalhados em planilhas",
+            "Negócios que não confiam nos relatórios",
+            "Times que perdem tempo consolidando dados manualmente"
+          ].map((item, i) => (
+            <div key={i} className="bg-slate-900 p-6 rounded-xl">
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -101,24 +118,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AUTORIDADE */}
+      {/* RESULTADOS */}
       <section className="py-24 px-6 text-center">
         <h2 className="text-3xl font-semibold mb-6">Resultados</h2>
 
         <div className="flex flex-col md:flex-row gap-8 justify-center">
           <div>
-            <h3 className="text-4xl font-bold text-sky-400">+80%</h3>
+            <h3 className="text-4xl font-bold text-green-400">+80%</h3>
             <p>Ganho de performance</p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold text-sky-400">-40%</h3>
+            <h3 className="text-4xl font-bold text-green-400">-40%</h3>
             <p>Redução de custo</p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold text-sky-400">100%</h3>
+            <h3 className="text-4xl font-bold text-green-400">100%</h3>
             <p>Decisões baseadas em dados</p>
           </div>
         </div>
+      </section>
+
+      {/* OFERTA */}
+      <section className="py-24 text-center bg-slate-900">
+        <h2 className="text-3xl font-semibold mb-6">
+          Diagnóstico gratuito de dados
+        </h2>
+
+        <p className="text-slate-300 max-w-xl mx-auto mb-8">
+          Em uma conversa rápida, identifico os principais problemas da sua estrutura
+          de dados e mostro como resolver.
+        </p>
+
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 px-8 py-4 rounded-xl font-semibold text-black"
+        >
+          Quero meu diagnóstico 🚀
+        </a>
       </section>
 
       {/* CTA FINAL */}
@@ -131,9 +169,9 @@ export default function Home() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-900 px-10 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:scale-105 transition"
+          className="bg-green-500 px-10 py-5 rounded-2xl font-semibold text-lg text-black shadow-lg hover:scale-105 transition"
         >
-          Falar no WhatsApp
+          Quero meu diagnóstico 🚀
         </a>
       </section>
 
