@@ -10,6 +10,24 @@ export default function Home() {
   return (
     <div className="bg-slate-950 text-white min-h-screen">
 
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800 flex justify-between items-center px-6 py-4">
+        
+        <div className="text-xl font-bold tracking-wide">
+          WA <span className="text-green-400">DATA</span>
+        </div>
+
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 px-5 py-2 rounded-lg text-black font-semibold hover:scale-105 transition"
+        >
+          Falar agora
+        </a>
+
+      </header>
+
       {/* WHATSAPP FLOAT */}
       <a
         href={whatsappLink}
